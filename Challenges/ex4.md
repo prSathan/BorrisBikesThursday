@@ -1,6 +1,6 @@
 Type of error: NameError
 
-FilePath: /Users/prabusathan/.rvm/rubies/ruby-2.4.0/bin/irb:11:in `<main>'
+FilePath: /Users/prabusathan/.rvm/rubies/ruby-2.4.0/bin/irb:11:in
 
 LineNumber = from (irb):1
 
