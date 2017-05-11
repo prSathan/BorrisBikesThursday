@@ -19,3 +19,8 @@ class DockingStation
   attr_reader :bike
 
 end
+
+#docking_station = DockingStation.new
+# bike1 = Bike.new
+# docking_station.dock(bike1)
+# docking_station.bike

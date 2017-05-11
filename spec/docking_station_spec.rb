@@ -1,7 +1,7 @@
 require "docking_station"
 
 describe DockingStation do
-  it "assigns object in the DockingStation to the bike variable" do
+  it "responds to release_bike" do
     is_expected.to respond_to(:release_bike)
   end
 
@@ -13,14 +13,14 @@ describe DockingStation do
 
   it "docks the bike back to a docking station" do
     bike = Bike.new
-    expect(subject.dock(bike)).to eq bike
+    expect(subject.dock(bike)).to eq [bike]
   end
 
-  it "returns docked bikes" do
-    bike = Bike.new
-    subject.dock(bike)
-    expect(subject.bike).to eq bikes
-  end
+  #it "returns docked bikes" do
+  #  bike = Bike.new
+  #  subject.dock(bike)
+  #  expect(subject.bike).to eq bike
+#  end
 
  describe '#release_bike' do
   it "Raises an error when there are no bikes available" do
@@ -30,7 +30,7 @@ describe DockingStation do
 
   describe '#dock' do
   it "Raises an error when full" do
-    20.times { subject.dock(Bike.new) }
+  20.times { subject.dock(Bike.new) }
     expect { subject.dock(Bike.new) }.to raise_error("Docking station full")
   end
  end
