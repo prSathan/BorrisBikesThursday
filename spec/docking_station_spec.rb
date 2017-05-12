@@ -36,4 +36,13 @@ describe DockingStation do
   end
  end
 
+ describe '#initialize' do
+   it "Allows a user to input capacity when docking station class is initialized" do
+     station = DockingStation.new
+     station2 = DockingStation.new(30)
+     expect(station.capacity).to eq 20
+     expect(station2.capacity).to eq 30
+   end
+ end
+
 end
